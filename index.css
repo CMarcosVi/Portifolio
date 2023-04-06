@@ -203,7 +203,19 @@ body{
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
+.projetosSubTitulo {
+    padding: 1rem;
+    margin: 2rem;
+    font-size: 1.5rem;
+    color: #00f;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
 .proejtosS {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.proejtosS2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -250,6 +262,41 @@ body{
 }
 #Ploguin{
     background-image: url('./fotosProjetos/loguin.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#calculadora{
+    background-image: url('./fotosProjetos/Calculadora.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#relogio{
+    background-image: url('./fotosProjetos/Relogio.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#apliticoConcelho{
+    background-image: url('./fotosProjetos/AplicativoDeConcelhos.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#geradorDeSenha{
+    background-image: url('./fotosProjetos/GeradorDeSenha.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#previewCard{
+    background-image: url('./fotosProjetos/PreviewCard.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
