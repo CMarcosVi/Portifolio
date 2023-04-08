@@ -331,6 +331,11 @@ body{
     color: #fff;
     font-family: 'Raleway', sans-serif;
 }
+.restrito{
+    text-align: center;
+    color: #f00;
+    font-family: 'Raleway', sans-serif;
+}
 .iconesdoProjeto{
     display: flex;
     justify-content: center;
