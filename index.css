@@ -315,8 +315,8 @@ body::-webkit-scrollbar {
     background-size: cover;
     z-index: 0;
 }
-#relogio{
-    background-image: url('./fotosProjetos/Relogio.png');
+#projetoB{
+    background-image: url('./fotosProjetos/Project-B.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
