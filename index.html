@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div id="container">
-              <h1 class="nome">Marcos Vinicius</h1>
+              <h1 class="nome">MV</h1>
               <ul class="navBar fechado">
                 <a class="link" href="#Home" >Home</a>
                 <a class="link" href="#Habilidades">Habilidades</a>
@@ -28,8 +28,18 @@
     </header>
     <main>
       <section id="Home">
-        <h1 class="saudacao">Ola</h1>
-        <p class="apresentacao">ola meu nome é Marcos<br />E sou um desenvolvedor Front-end</p>
+        <div class="iconsContatoHome">
+          <p class="apresentacao">Olá eu sou um</p>
+          <a href="https://github.com/CMarcosVi" target="_blank">
+            <img class="iconsCotatos" src="./iconsContatos/github.png" />
+          </a>
+          <a href="https://www.linkedin.com/in/marcos-vin%C3%ADcius-259444229/" target="_blank">
+            <img class="iconsCotatos" src="./iconsContatos/linkedin.png" />
+          </a>
+        </div>
+        <div class="tituloDoPortifolio">
+          <p class="meuNome">Develeloper Front-end</p>
+        </div>
         <button class="botaoModal">Clique para saber mais sobre mim </button>
         <div id="modalAvatar" class="fechar">
           <div class="modal">
@@ -53,9 +63,9 @@
       </section>
 
       <section id="Habilidades">
-        <h1 class="habilidadesTitulo">Lista de Habilidades</h1>
-        <p class="explicacao">aqui estão algumas das minhas habilidades</p>
-        <div class="habilidadelist">
+        <h1 class="habilidadesTitulo js-scroll">LISTA DE HABILIDADES</h1>
+        <p class="explicacao  js-scroll">aqui estão algumas das minhas habilidades</p>
+        <div class="habilidadelist  js-scroll">
           <div class="card">
             <div class="card2">
               <img class="imagemHb" src='./icon/html1.png' />
@@ -162,9 +172,9 @@
       </section>
 
       <section id="Projetos">
-        <h1 class="projetosTitulo">Projetos</h1>
-        <h2 class="projetosSubTitulo">Projetos em destaque</h2>
-        <div class="proejtosS">
+        <h1 class="projetosTitulo  js-scroll">PROJETOS</h1>
+        <h2 class="projetosSubTitulo  js-scroll">Projetos em destaque</h2>
+        <div class="proejtosS  js-scroll">
           <div class="projeto" id="Bop">
             <div class="filter">
                 <h1 class="nameProjeto">Born of Putridity</h1>
@@ -216,8 +226,8 @@
             </div>
           </div>
         </a>
-        <h2 class="projetosSubTitulo">outros projetos</h2>
-        <div class="proejtosS">
+        <h2 class="projetosSubTitulo  js-scroll">outros projetos</h2>
+        <div class="proejtosS  js-scroll">
             <a href="https://cmarcosvi.github.io/Project-B/" target="_blank">
             <div class="projeto" id="projetoB">
               <div class="filter">
@@ -299,9 +309,9 @@
         </div>
       </section>
       <section id="idiomas">
-        <h1 class="idiomaTitulo">Idiomas</h1>
-        <p class="InfoIdiomas">idiomas dos quais tenho conhecimento</p>
-        <div class="IdiomaLista">
+        <h1 class="idiomaTitulo js-scroll">IDIOMAS</h1>
+        <p class="InfoIdiomas js-scroll">idiomas dos quais tenho conhecimento</p>
+        <div class="IdiomaLista js-scroll">
           <div class="ContainersIdiomas">
             <h2 class="nomeIdioma">Português</h2>
             <img class="idioma" src="./Idiomas/brasil.png"/>
@@ -363,7 +373,7 @@
 
 
       <section id="contatos">
-        <h1 class="tituloContatos">contatos</h1>
+        <h1 class="tituloContatos">CONTATOS</h1>
         <div id="listContatos">
           <div class="contato">
             <a href="https://www.linkedin.com/in/marcos-vin%C3%ADcius-259444229/" target="_blank">
@@ -408,6 +418,44 @@
               meuModal.classList.add('fechar');
           }
       });
+      function typeWriter() {
+        const element = document.querySelector(".meuNome");
+        const text = element.innerHTML;
+        let i = 0;
+        const speed = 100;
+        function animate() {
+          element.innerHTML = text.slice(0, i + 1);
+          i++;
+          if (i < text.length) {
+            setTimeout(animate, speed);
+          }
+        }
+
+        animate();
+      }
+      typeWriter();
+      function initAnimacaoScroll() {
+        const sections = document.querySelectorAll('.js-scroll');
+        if(sections.length) {
+          const windowMetade = window.innerHeight * 0.6;
+
+          function animaScroll() {
+            sections.forEach((section) => {
+              const sectionTop = section.getBoundingClientRect().top;
+              const isSectionVisible = (sectionTop - windowMetade) < 0;
+              if(isSectionVisible)
+                section.classList.add('ativo');
+              else 
+                section.classList.remove('ativo');
+            })
+          }
+
+          animaScroll();
+
+          window.addEventListener('scroll', animaScroll);
+        }
+      }
+      initAnimacaoScroll();
     </script>
 </body>
 </html>

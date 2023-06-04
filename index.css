@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 body{
   height:100vh;
-  background-color:#00000f;
+  background-color:#00000f ;
 }
 body::-webkit-scrollbar {
     width: 8px;
@@ -32,16 +34,18 @@ body::-webkit-scrollbar {
     display:flex;
     justify-content: space-around;
     align-items:center;
-    background-image: linear-gradient(180deg, #002 , #0000);
+    background-image: linear-gradient(180deg, rgb(0, 0, 0) , #0000);
     z-index: 99;
 }
 .nome{
   font-family: 'Poppins', sans-serif;
   color:#00f;
+  letter-spacing: 5px;
 }
 .link{
     display: flex;
     margin:0rem 1.5rem;
+    font-size: 1.1rem;
     font-style:none;
     font-family: 'Poppins', sans-serif;
     color:#00f;
@@ -60,32 +64,21 @@ body::-webkit-scrollbar {
 .saudacao {
     font-size: 5rem;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(
-      54deg,
-      rgba(0, 0, 255, 1) 25%,
-      rgba(255, 255, 255, 1) 25%,
-      rgba(255, 255, 255, 1) 50%,
-      rgba(0, 0, 255, 1) 50%
-    );
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 .apresentacao {
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(
-      50deg,
-      rgba(0, 0, 255, 1) 25%,
-      rgba(255, 255, 255, 1) 25%,
-      rgba(255, 255, 255, 1) 51%,
-      rgba(0, 0, 255, 1) 51%
-    );
-    background-size: 50% 50%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: 'Manrope', sans-serif;
+    color: #00f;
+    font-size: 5rem;
+    text-align: start;
+    font-weight: 900;
   }
+.meuNome{    
+    font-family: 'Manrope', sans-serif;
+    font-size: 5rem;
+    text-align: start;
+    font-weight: 900;
+    color: #fff;
+}
 #Home {
     height: 100vh;
     display: flex;
@@ -115,7 +108,7 @@ body::-webkit-scrollbar {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40rem;
+    width: 45rem;
     height: 20rem;
     background-color: #000;
     border-radius: 1rem;
@@ -134,7 +127,7 @@ body::-webkit-scrollbar {
 }
 .sobreMim {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
@@ -142,7 +135,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-style: none;
+
 }
 .tituloBotaofechar > h1{
     color:#00f;
@@ -160,6 +153,8 @@ body::-webkit-scrollbar {
     width: 1.5rem;
     text-align: center;
     transition: 1s;
+    border-style: none;
+    border:solid 2px #00f;  
 }
 .tituloBotaofechar > button:hover{
     color: #00f;
@@ -171,7 +166,18 @@ body::-webkit-scrollbar {
     align-items: center;
     padding: 0rem 1rem;
 }
-
+.iconsContatoHome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconsContatoHome  img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem;
+    padding-top: 1rem;
+}
 #Habilidades {
     height: 100vh;
     display: flex;
@@ -182,7 +188,8 @@ body::-webkit-scrollbar {
 }
 .habilidadesTitulo {
     color: #00f;
-    font-size: 1.1rem;
+    font-size: 2rem;
+    letter-spacing: 5px;
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
@@ -197,17 +204,27 @@ body::-webkit-scrollbar {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .imagemHb {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 }
+.js-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: .3s;
+  }
+  
+.js-scroll.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 .testo{
     font-size: .75rem;
     font-family: "Poppins", sans-serif;
     color: #0037f1;
 }
 .card {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-image: linear-gradient(163deg, #5555ff 0%, #00f 100%);
     border-radius: 20px;
     transition: all 0.3s;
@@ -218,8 +235,8 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: #1a1a1a;
     border-radius: 1rem;
     transition: all 0.2s;
@@ -241,11 +258,12 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     padding: 1.5rem 0rem;
     background-color: #00000f;
-    margin: 5rem 0;
+    margin: 0;
 }
 .projetosTitulo {
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
     color: #00f;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -422,7 +440,8 @@ body::-webkit-scrollbar {
 }
 .idiomaTitulo{
     padding: 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
     color: #00f;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -493,7 +512,8 @@ body::-webkit-scrollbar {
 }
 .tituloContatos {
     color: #00f;
-    font-size: 4rem;    
+    font-size: 2.5rem;
+    letter-spacing: 5px;  
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
@@ -508,7 +528,17 @@ body::-webkit-scrollbar {
     width: 50px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1030px){
+    .meuNome{    
+        font-size: 3rem;
+    }
+    .apresentacao{
+        font-size: 3rem;
+    }
+    .iconsContatoHome  img{
+        height: 40px;
+        width: 40px;
+    }
     .habilidadelist {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -645,6 +675,16 @@ body::-webkit-scrollbar {
     }
 }
 @media screen and (max-width: 670px){
+    .meuNome{    
+        font-size: 2rem;
+    }
+    .apresentacao{
+        font-size: 2rem;
+    }
+    .iconsContatoHome  img{
+        height: 30px;
+        width: 30px;
+    }
     #modalAvatar{
         width: 18rem;
         height: 30rem;
